@@ -14,7 +14,7 @@ resource "aws_instance" "proj2" {
     Name = "cpms"
   }
 }
-resource "aws_db_instance" "default" {
+resource "aws_db_instance" "us-east-2a" {
   allocated_storage    = 10
   engine               = "mysql"
   engine_version       = "5.7"
