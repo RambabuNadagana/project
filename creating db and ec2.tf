@@ -23,7 +23,7 @@ resource "aws_db_instance" "default" {
   identifier           = "myrdb2"
   username             = "admin"
   password             = "Ramrebel56"
-  parameter_group_name = "default.mysql8.0"
+  parameter_group_name = "default.mysql5.7"
   skip_final_snapshot  = true
   publicly_accessible  = true
   vpc_security_group_ids = ["sg-0f3745e327f461d64"]
