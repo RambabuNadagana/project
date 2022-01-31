@@ -21,7 +21,7 @@ resource "aws_db_instance" "default" {
   instance_class       = "db.t2.micro"
   name                 = "cpms"
   identifier           = "myrdb"
-  username             = "database-3"
+  username             = "admin"
   password             = "Ramrebel56"
   parameter_group_name = "default.mysql5.7"
   skip_final_snapshot  = true
