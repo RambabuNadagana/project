@@ -8,7 +8,7 @@ resource "aws_instance" "proj2" {
   subnet_id   = "subnet-09521af8c6cfe39fb"
   key_name = "jenkins"
   user_data = templatefile("${path.module}/userdata.tftpl", {endpoint = aws_db_instance.default.endpoint,password = aws_db_instance.default.password})
-  iam_instance_profile = "role_all"
+  iam_instance_profile = "ram-s3-role"
   security_groups = ["sg-0bb5391635b3c304e"]
   tags = {
     Name = "cpms"
