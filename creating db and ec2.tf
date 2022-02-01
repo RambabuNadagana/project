@@ -7,11 +7,11 @@ resource "aws_instance" "myec2" {
   instance_type = "t2.micro"
   subnet_id   = "subnet-09521af8c6cfe39fb"
   key_name = "jenkins"
-  user_data = templatefile("${path.module}/userdata.tftpl", {endpoint = aws_db_instance.default.endpoint,password = aws_db_instance.default.password})
+  user_data = templatefile("${path.module}/userdata.tftpl", {endpoint = aws_db_instance.default.endpoint,address = aws_db_instance.default.address})
   iam_instance_profile = "ram-s3-role"
   security_groups = ["sg-0bb5391635b3c304e"]
   tags = {
-    Name = "cpms3"
+    Name = "cpms4"
   }
 }
 resource "aws_db_instance" "default" {
@@ -20,7 +20,7 @@ resource "aws_db_instance" "default" {
   engine_version       = "5.7"
   instance_class       = "db.t2.micro"
   name                 = "cpms"
-  identifier           = "ramdb3"
+  identifier           = "ramdb4"
   username             = "admin"
   password             = "Ramrebel56"
   parameter_group_name = "default.mysql5.7"
