@@ -3,7 +3,7 @@
 define('DB_HOST','localhost');
 define('DB_USER','admin');
 define('DB_PASS','Ramrebel56');
-define('DB_NAME','cpms');
+define('DB_NAME','');
 // Establish database connection.
 try
 {
