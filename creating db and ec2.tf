@@ -11,7 +11,7 @@ resource "aws_instance" "myec2" {
   iam_instance_profile = "ram-s3-role"
   security_groups = ["sg-0bb5391635b3c304e"]
   tags = {
-    Name = "cpms8"
+    Name = "cpms9"
   }
 }
 resource "aws_db_instance" "default" {
@@ -20,7 +20,7 @@ resource "aws_db_instance" "default" {
   engine_version       = "5.7"
   instance_class       = "db.t2.micro"
   name                 = "cpms"
-  identifier           = "ramdb8"
+  identifier           = "ramdb9"
   username             = "admin"
   password             = "Ramrebel56"
   parameter_group_name = "default.mysql5.7"
