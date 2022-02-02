@@ -1,6 +1,6 @@
 <?php 
 // DB credentials.
-define('DB_HOST','database-3.c5s6juzypqax.us-east-2.rds.amazonaws.com');
+define('DB_HOST','localhost');
 define('DB_USER','admin');
 define('DB_PASS','Ramrebel56');
 define('DB_NAME','cpms');
