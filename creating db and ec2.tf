@@ -11,7 +11,7 @@ resource "aws_instance" "myec2" {
   iam_instance_profile = "ram-s3-role"
   security_groups = ["sg-0bb5391635b3c304e"]
   tags = {
-    Name = "cpms10"
+    Name = "cpms11"
   }
 }
 resource "aws_db_instance" "default" {
@@ -20,11 +20,11 @@ resource "aws_db_instance" "default" {
   engine_version       = "5.7"
   instance_class       = "db.t2.micro"
   name                 = "cpms"
-  identifier           = "ramdb11"
+  identifier           = "ramdb12"
   username             = "admin"
   password             = "Ramrebel56"
   parameter_group_name = "default.mysql5.7"
   skip_final_snapshot  = true
   publicly_accessible  = true
-  vpc_security_group_ids = ["sg-0f3745e327f461d64"]
+  vpc_security_group_ids = ["sg-0bb5391635b3c304e"]
 }
